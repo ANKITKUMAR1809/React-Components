@@ -4,10 +4,10 @@ import { Navbar } from './Components/Navbar/Navbar'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  const linkarr=["BLOGS","CATEGORY","ABOUT US","CONTACT US"]
   return (
     <>
-    <Navbar/>
+    <Navbar siteName="SAK" links={linkarr} />
     </>
   )
 }

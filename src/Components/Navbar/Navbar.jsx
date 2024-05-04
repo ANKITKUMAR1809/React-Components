@@ -1,17 +1,15 @@
 import React from 'react'
 import './Navbar.css'
-export const Navbar = () => {
+export const Navbar = (props) => {
     return (
         <div className="navbar">
             <div className="logo">
-                <h1>SAK</h1>
+                <h1>{props.siteName}</h1>
             </div>
             <div className="navmenu">
-                <a href="">HOME</a>
-                <a href="">CATEGORY</a>
-                <a href="">BLOGS</a>
-                <a href="">ABOUT US</a>
-                <a href="">CONTACT US</a>
+                {props.links.map((links,idx)=> 
+                    <a href="" key={idx}>{links}</a>
+                )}
             </div>
         </div>
     )
